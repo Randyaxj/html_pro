@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width,
+          user-scalable=no, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <link href="css/normalize.css" rel="stylesheet" />
+
+<!-- 这是一个注释 -->
+
+
+
+
+    <style>
+        div {
+            width: 200px;
+            height: 100px ;
+            background-color:skyblue;
+            border: 1px solid #00ff21;  /*输入#  直接选择 颜色， 或者输入英文颜色名字  */
+        }
+
+       #div1 {
+           /*
+            width: 200px;
+            height: 100px ;
+            background-color:skyblue;
+            border: 1px solid #f00;  */
+
+            padding-top : 10px;
+
+            font-family:'Microsoft YaHei';   /*可以选择 多个字体，按 先后顺序选择，如果没有，按照电脑默认字体 */
+            font-size : 30px  ;  /* 字体为正方形 */
+
+            /*float:right*/
+
+            display:inline-block
+
+        }
+
+        #div2 {
+            /*上右  下 左 */
+            margin: 60px 100px 20px 30px;
+
+            /*  margin: 60px 0px   */
+
+            /*   margin  60px */
+
+            /* margin 0 auto  居中   */
+
+           /*float :left*/ 
+           display:inline-block
+        }
+
+        #div3 {
+            clear:both
+        }
+
+        /*abolute   绝对位置  */
+        img {
+        position:absolute ;
+        top:10px;
+        left:20px
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+       ul li {
+           display:inline-block;
+       }
+
+
+       /*伪类 鼠标放上去有这样的效果 */
+        #div1 :hover {
+            background-color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id ="div1"> hello world  我的字体 </div>
+
+    <div id="div2">  默认字体 </div>
+
+    <div id ="div3"> </div>
+
+
+    <ul>
+        <li>项目1</li>
+        <li>项目2</li>
+        <li>项目3</li>
+    </ul>
+
+
+
+</body>
+</html>

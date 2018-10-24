@@ -1,0 +1,54 @@
+﻿body {
+}
+
+/* postion  底部 要用fixed，   在滚动的时候保持不动 一般用bottom*/
+    
+    
+/* 头部样式   */
+ img {
+   position:absolute ;
+   left:20px;
+   top: 23.78 px;
+   color: #ac9595
+   color:
+     }
+
+ /*  首行空两格  字体默认是16px，空两个字符就是32px  */
+ #article p {
+    text-indent: 32px;
+    margin :0 20px;
+    line-height:25px;
+    
+
+}
+
+
+
+
+ /* 空格是包含关系*/
+
+/*如下，逗号 是 都设置的意思  */
+/*标记  标签*/ 
+/*
+#article h4, .blue {
+    color: red;
+}
+*/
+
+
+/*标记   class */
+/*如果有冲突，按最精确的来   */
+/*   class="blue"   */
+.blue {
+    color: blue;
+}
+
+
+/*标记  id  */
+/*    id ="yellow"   */
+#yellow {
+    color:yellow
+}
+
+
+
