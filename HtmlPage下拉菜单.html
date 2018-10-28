@@ -10,21 +10,35 @@
   
 <STYLE type=text/css>
 *{margin:0;padding:0;border:0;}
-#fm { line-height: 24px; list-style-type: none; background:#666; }/*设置盒子的行高，去掉标记，设置背景颜色*/
-#fm a { display: block; width: 80px; text-align:center; }/*设置A标签为块元素不显示，宽度，居中*/
-#fm a:link { color:#666; text-decoration:none; } /* 设置未访问的链接样式*/
-#fm a:visited { color:#666;text-decoration:none; } /* 设置已访问的链接样式 */
-#fm a:hover { color:#FFF;text-decoration:none;font-weight:bold; }  /* 当有鼠标悬停在链接上的颜色 */
+#fm { line-height: 24px; list-style-type: none; background:rgb(248, 248, 250); }/*设置盒子的行高，去掉标记，设置背景颜色*/
+#fm a { display: block; width: 100px; text-align:center; }/*设置A标签为块元素不显示，宽度，居中*/
+
+#fm a:link { color:rgb(236, 25, 25); text-decoration:none; } /* 设置未访问的链接样式*/
+#fm a:visited { color:rgb(34, 202, 48);text-decoration:none; } /* 设置已访问的链接样式 */
+
+#fm a:hover { color:rgb(160, 49, 49);text-decoration:none;font-weight:bold; }  /* 当有鼠标悬停在链接上的颜色 */
+
+
 #fm li { float: left; width: 150px; background:#CCC; }
-#fm li a:hover{ background:#999; }
+#fm li a:hover{ background:rgb(231, 14, 14); }    /* 一级菜单栏目 当有鼠标悬停在链接上的颜色 */
+
+/* left: -999em;  将ul 移动到浏览器外，达到暂时隐藏的目的 
+#fm li:hover ul { left: auto; }   在鼠标悬停时 再将 left 设置为auto，显示 ul 
+ */
 #fm li ul { line-height: 27px; list-style-type: none;text-align:left; left: -999em; width: 80px; position: absolute; }
-#fm li ul li{ float: left; width: 80px; background: #F6F6F6; } 
-#fm li ul a{ display: block; width: 80px;width: 80px;text-align:left;padding-left:5px; } 
+
+
+/* #fm li ul li{ float: left; width: 100px; background: #F6F6F6; } 
+#fm li ul a{ display: block; width: 100px;text-align:left;padding-left:5px; } 
 #fm li ul a:link { color:#666; text-decoration:none; } 
 #fm li ul a:visited { color:#666;text-decoration:none; } 
-#fm li ul a:hover { color:#F3F3F3;text-decoration:none;font-weight:normal; background:#C00; } 
+#fm li ul a:hover { color:rgb(59, 240, 35);text-decoration:none;font-weight:normal; background:rgb(0, 204, 92); }  */
+
+
 #fm li:hover ul { left: auto; } 
-#fm li.sfhover ul { left: auto; } 
+/* test3 和 hover之间不能有空格，必须紧挨着写，否则错误 */
+/* #test3:hover + #test2 { left: auto; }     */
+
 #content { clear: left; } 
 </STYLE>
 
@@ -37,13 +51,19 @@
 <body>
  
     <UL id=fm> 
-        <LI><A href="#">一级菜单栏目</A> 
-        <UL> 
-        <LI><A href="#">一级菜单目录</A></LI> 
-        <LI><A href="#">一级菜单目录</A></LI> 
-        <LI><A href="#">一级菜单目录</A></LI> 
-        <LI><A href="#">一级菜单目录</A></LI></UL>
+        <!-- href="#"  超链接，链接到别的页面，#是链接到本身页面，暂时没给链接地址的时候这么用。 
+            后面也可以跟上一个id名称，就成锚链接了(书签)-->
+        <LI id ="test1">
+            <A href="#"  id ="test3" >一级菜单栏目</A> 
+            <UL id = "test2" > 
+                <LI><A href="#">一级菜单目录</A></LI> 
+                <LI><A href="#">一级菜单目录</A></LI> 
+                <LI><A href="#">一级菜单目录</A></LI> 
+                <LI><A href="#">一级菜单目录</A></LI>
+            </UL>
         </LI> 
+
+
         <LI><A href="#">二级菜单栏目</A> 
         <UL> 
         <LI><A href="#">二级菜单目录</A></LI> 
@@ -64,7 +84,8 @@
         <LI><A href="#">四级菜单目录</A></LI> 
         <LI><A href="#">四级菜单目录</A></LI> 
         <LI><A href="#">四级菜单目录</A></LI></UL></LI> 
-        </UL></LI></UL>
+        </UL></LI>
+    </UL>
 
 
 </body>

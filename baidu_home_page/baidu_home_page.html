@@ -59,14 +59,44 @@
         }
 
 
-        #gengduo{
+        #chanpian {
             background-color: hsla(246, 87%, 50%, 0.747)  ;
             padding: 5px 5px 12px 10px ;
             margin: 0;
             position: fixed;
             top: 0px;
             right:0px;
+            width:80px ;
         }
+
+        #xiala {
+            background-color:#f1f0f0 ;
+            text-align: center;
+            padding: 5px 5px 12px 10px ;
+            margin: 0px;
+            position: fixed;
+            top: 50px;
+            right:-100px;
+            width:80px ;
+            
+        }
+       
+
+        #gengduo ul li {
+            list-style-type: none;
+            margin-bottom: 15px;
+            padding: 0;
+            border: 0;
+        }
+
+
+        /* css需要通过 > 与 + 来控制下个元素，子集元素，下个元素的子集元素的CSS */
+        /* #chanpian 和 #xiala属于同级别，所以此处需要用 +    */
+        /* 最开始的时候 #chanpian 和 #xiala 之间加了一个br，然后用 + 就不对，删除br后显示正确了，为啥呢？暂时还不知道 */
+        /* chanpian 和 hover之间不能有空格，必须紧挨着写，否则错误 */
+        #chanpian:hover{background-color: #f1f0f0;  }
+        #chanpian:hover + #xiala{right:0px;  }
+
 
         #picture{
             text-align:center;
@@ -116,7 +146,69 @@
         </div>
 
         <div id= "gengduo">
-            更多产品
+           
+            <a id ="chanpian" href ="#">
+                更多产品
+            </a>
+            <ul id= "xiala">
+                <li>
+                    <a href="#"> 
+                        <img src="./bdbri_72.png" alt="nuomi"   width=40 height=40 >
+                        <br> 
+                        糯米
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"> 
+                        <img src="./qqyy.png" alt="tupian"   width=40 height=40 >
+                        <br> 
+                        音乐
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"> 
+                        <img src="./image_72.png" alt="nuomi"   width=40 height=40 >
+                        <br> 
+                        图片
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"> 
+                        <img src="./zhidao_72.png" alt="zhidao"   width=40 height=40 >
+                        <br> 
+                        知道
+                    </a>
+                </li>
+                    
+                <li>
+                    <a href="#"> 
+                        <img src="./wenku_72.png" alt="wenku"   width=40 height=40 >
+                        <br> 
+                        文库
+                    </a>
+                </li>                    
+
+                <li>
+                    <a href="#"> 
+                        <img src="./bang_72.png" alt="fengyunbang"   width=40 height=40 >
+                        <br> 
+                        风云榜
+                    </a>
+                </li>
+                    
+                <li>
+                    <a href="#"> 
+                        <img src="./tuiguang_72.png" alt="tuiguang"   width=40 height=40 >
+                        <br> 
+                        百度推广
+                    </a>
+                </li>                   
+
+            </ul>    
+           
         </div>  
     </div>
 
